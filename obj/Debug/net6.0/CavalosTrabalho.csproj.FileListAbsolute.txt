@@ -1,0 +1,15 @@
+C:\Users\david\source\repos\CavalosTrabalho\bin\Debug\net6.0\CavalosTrabalho.exe
+C:\Users\david\source\repos\CavalosTrabalho\bin\Debug\net6.0\CavalosTrabalho.deps.json
+C:\Users\david\source\repos\CavalosTrabalho\bin\Debug\net6.0\CavalosTrabalho.runtimeconfig.json
+C:\Users\david\source\repos\CavalosTrabalho\bin\Debug\net6.0\CavalosTrabalho.dll
+C:\Users\david\source\repos\CavalosTrabalho\bin\Debug\net6.0\CavalosTrabalho.pdb
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.csproj.AssemblyReference.cache
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.AssemblyInfoInputs.cache
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.AssemblyInfo.cs
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.csproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.dll
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\refint\CavalosTrabalho.dll
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.pdb
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\CavalosTrabalho.genruntimeconfig.cache
+C:\Users\david\source\repos\CavalosTrabalho\obj\Debug\net6.0\ref\CavalosTrabalho.dll
