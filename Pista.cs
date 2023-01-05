@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
-    internal class Pista : Torneio
+    public class Pista : Torneio
     {
         private string tipo;
-        private int recompensaPrimeiro;
-        private int recompensaSegundo;
-        private int recompensaTerceiro;
-
-        public string Tipo { get => tipo; set => tipo = value; }
-        public int RecompensaPrimeiro { get => recompensaPrimeiro; set => recompensaPrimeiro = value; }
-        public int RecompensaSegundo { get => recompensaSegundo; set => recompensaSegundo = value; }
-        public int RecompensaTerceiro { get => recompensaTerceiro; set => recompensaTerceiro = value; }
+        private int recompensa;
+        public Pista(int equipas, int participantes, string pista, string tipo, int recompensa) : base(equipas, participantes, pista)
+        {
+            this.tipo = tipo;
+            this.recompensa = recompensa;
+        }
     }
 }

@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
-    internal class Torneio
+    public class Torneio
     {
         private int equipas;
         private int participantes;
         private string pista;
+
+        public Torneio(int equipas, int participantes, string pista)
+        {
+            this.equipas = equipas;
+            this.participantes = participantes;
+            this.pista = pista;
+        }
 
         public int Equipas { get => equipas; set => equipas = value; }
         public int Participantes { get => participantes; set => participantes = value; }

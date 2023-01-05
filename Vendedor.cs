@@ -31,7 +31,16 @@ namespace CavalosTrabalho
             }
             else
             {
-                return null;
+                if (EscolhaCavalo != "Basico" && EscolhaCavalo != "Intermedio" && EscolhaCavalo != "Forte")
+                {
+                    Console.WriteLine("Escolha não válida");
+                    return null;
+                }
+                else
+                {
+                    Console.WriteLine("Não tem dinheiro para esse cavalo");
+                    return null;
+                }
             }
 
         }

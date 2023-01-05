@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
-    internal class Cavalo
+    public class Cavalo
     {
         private string nome;
         private int velocidade;
