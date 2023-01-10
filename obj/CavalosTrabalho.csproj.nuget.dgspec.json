@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\CavalosTrabalho.csproj": {}
+    "C:\\Users\\david\\Source\\Repos\\CavaloTrabalho\\CavalosTrabalho.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\CavalosTrabalho.csproj": {
+    "C:\\Users\\david\\Source\\Repos\\CavaloTrabalho\\CavalosTrabalho.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\CavalosTrabalho.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Source\\Repos\\CavaloTrabalho\\CavalosTrabalho.csproj",
         "projectName": "CavalosTrabalho",
-        "projectPath": "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\CavalosTrabalho.csproj",
+        "projectPath": "C:\\Users\\david\\Source\\Repos\\CavaloTrabalho\\CavalosTrabalho.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\obj\\",
+        "outputPath": "C:\\Users\\david\\Source\\Repos\\CavaloTrabalho\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
