@@ -23,6 +23,8 @@ namespace CavalosTrabalho
             Cavalo Intermedio = new Cavalo("Medio", 1500, 10, 10, 20);
             Cavalo Forte = new Cavalo("Forte", 3000, 18, 18, 10);
 
+            Torneio t = new Torneio(0, 0, 0);
+
             //Introduçao
             Console.WriteLine("Bem-Vindo ao jogo dos cavalos de corrida!!!");
             Console.Write("                                 |\\    /|\r\n                              ___| \\,,/_/\r\n                           ---__/ \\/    \\\r\n                          __--/     (D)  \\\r\n                          _ -/    (_      \\\r\n                         // /       \\_ /  -\\\r\n   __-------_____--___--/           / \\_ O o)\r\n  /                                 /   \\__/\r\n /                                 /\r\n||          )                   \\_/\\\r\n||         /              _      /  |\r\n| |      /--______      ___\\    /\\  :\r\n| /   __-  - _/   ------    |  |   \\ \\\r\n |   -  -   /                | |     \\ )\r\n |  |   -  |                 | )     | |\r\n  | |    | |                 | |    | |\r\n  | |    < |                 | |   |_/\r\n  < |    /__\\                <  \\\r\n  /__\\                       /___\\");
@@ -76,7 +78,7 @@ namespace CavalosTrabalho
                 Console.ReadKey();
 
                 //Corrida
-                Console.WriteLine(Torneio.race(Player1.Cavalo, Player1.Dinheiro));
+                Console.WriteLine(t.race(Player1.Cavalo, Player1));
                 }
             //Fim do jogo
             Console.Clear();

@@ -25,20 +25,23 @@ namespace CavalosTrabalho
 
         public string race(Cavalo cavalo, Equipa jogador)
         {
+            int lugar;
+
             Random rnd = new Random();
             this.participantes = rnd.Next(1, 21);
+            lugar = rnd.Next(2, 21);
 
             position = cavalo.Velocidade - (cavalo.Idade/2) * (cavalo.Stamina / 10) / this.participantes * rnd.Next(1, 21);
             recompensa = 1000 * (participantes / 10);
 
-            if(position == 1)
+            if(position > participantes)
             {
                 jogador.Dinheiro = jogador.Dinheiro + recompensa;
-                return "O jogador terminou a corrida em " + position + "º lugar! O jogador recebeu " + recompensa + " moedas!";
+                return "O jogador terminou a corrida em 1º lugar! O jogador recebeu " + recompensa + " moedas!";
             }
             else
             {
-                return "O jogador terminou a corrida em " + position + "º lugar!";
+                return "O jogador terminou a corrida em " + lugar + "º lugar!";
             }
         }
     }
