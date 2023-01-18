@@ -10,9 +10,9 @@ namespace CavalosTrabalho
     {
         public static Cavalo getCavalo(string EscolhaCavalo, Equipa equipa)
         {
-            Cavalo Basico = new Cavalo("Fraco", 2, 2, 10, 250);
-            Cavalo Intermedio = new Cavalo("Medio", 10, 10, 10, 1500);
-            Cavalo Forte = new Cavalo("Forte", 18, 18, 10, 3000);
+            Cavalo Basico = new Cavalo("Fraco",250, 2, 2, 30);
+            Cavalo Intermedio = new Cavalo("Medio", 1500, 10, 10, 20);
+            Cavalo Forte = new Cavalo("Forte", 3000, 18, 18, 10);
 
             if (EscolhaCavalo == "Basico" && equipa.Dinheiro >= 250)
             {
@@ -31,7 +31,16 @@ namespace CavalosTrabalho
             }
             else
             {
-                return null;
+                if (EscolhaCavalo != "Basico" && EscolhaCavalo != "Intermedio" && EscolhaCavalo != "Forte")
+                {
+                    Console.WriteLine("Escolha não válida");
+                    return null;
+                }
+                else
+                {
+                    Console.WriteLine("Não tem dinheiro para esse cavalo");
+                    return null;
+                }
             }
 
         }

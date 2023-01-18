@@ -1,7 +1,13 @@
 ﻿using CavalosTrabalho;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.Tracing;
+using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,41 +17,68 @@ namespace CavalosTrabalho
     {
         static void Main(string[] args)
         {
-            int dia;
             Equipa Player1 = new Equipa("Equipa 1", "None", 500, 1);
-            Cavalo Basico = new Cavalo("Fraco", 2, 2, 10, 250);
-            Cavalo Intermedio = new Cavalo("Medio", 10, 10, 10, 1500);
-            Cavalo Forte = new Cavalo("Forte", 18, 18, 10, 3000);
 
+            Cavalo Basico = new Cavalo("Fraco", 250, 2, 2, 30);
+            Cavalo Intermedio = new Cavalo("Medio", 1500, 10, 10, 20);
+            Cavalo Forte = new Cavalo("Forte", 3000, 18, 18, 10);
+
+            //Introduçao
             Console.WriteLine("Bem-Vindo ao jogo dos cavalos de corrida!!!");
             Console.Write("                                 |\\    /|\r\n                              ___| \\,,/_/\r\n                           ---__/ \\/    \\\r\n                          __--/     (D)  \\\r\n                          _ -/    (_      \\\r\n                         // /       \\_ /  -\\\r\n   __-------_____--___--/           / \\_ O o)\r\n  /                                 /   \\__/\r\n /                                 /\r\n||          )                   \\_/\\\r\n||         /              _      /  |\r\n| |      /--______      ___\\    /\\  :\r\n| /   __-  - _/   ------    |  |   \\ \\\r\n |   -  -   /                | |     \\ )\r\n |  |   -  |                 | )     | |\r\n  | |    | |                 | |    | |\r\n  | |    < |                 | |   |_/\r\n  < |    /__\\                <  \\\r\n  /__\\                       /___\\");
             Console.WriteLine("\nClique para começar...");
             Console.ReadKey();
             Console.Clear();
 
-            while (Player1.Dinheiro >= 0)
-            {
-                Console.WriteLine();
-                Console.WriteLine("[Dinheiro atual: " + Player1.Dinheiro + "]\n\n");
-                Console.WriteLine("Escolha o seu cavalo!!!\n\n");
-                Console.WriteLine("[Basico]");
-                Console.WriteLine(Basico);
-                Console.WriteLine("--------------------\n\n");
-                Console.WriteLine("[Intermedio]");
-                Console.WriteLine(Intermedio);
-                Console.WriteLine("--------------------\n\n");
-                Console.WriteLine("[Forte]\n\n");
-                Console.WriteLine(Forte);
-                string EscolhaJogador = Console.ReadLine();
-                Player1.Cavalo = VendedorCavalos.getCavalo(EscolhaJogador, Player1);
-                Console.WriteLine("\n\n" + Player1.Cavalo.Nome);
-                Console.ReadKey();
-                Console.Clear();
-                Console.WriteLine("[Dinheiro atual: " + Player1.Dinheiro + "]\n\n");
-                Console.ReadKey();
+            //Compra do cavalo inicial
+            Console.WriteLine("[Dinheiro atual: " + Player1.Dinheiro + " | Dia atual: " + Dias.nextDay() + "]\n\n");
+            Console.WriteLine("Escolha o seu cavalo!!!\n\n");
+            Console.WriteLine("[Basico]");
+            Console.WriteLine(Basico);
+            Console.WriteLine("--------------------\n\n");
+            Console.WriteLine("[Intermedio]");
+            Console.WriteLine(Intermedio);
+            Console.WriteLine("--------------------\n\n");
+            Console.WriteLine("[Forte]");
+            Console.WriteLine(Forte);
+            string EscolhaJogador = Console.ReadLine();
+            Player1.Cavalo = VendedorCavalos.getCavalo(EscolhaJogador, Player1);
 
+            while (Player1.Cavalo == null)
+            {
+                EscolhaJogador = Console.ReadLine();
+                Player1.Cavalo = VendedorCavalos.getCavalo(EscolhaJogador, Player1);
             }
 
+            Console.WriteLine("\n\nVocê comprou o cavalo " + Player1.Cavalo.Nome);
+            Console.ReadKey();
+
+            //Jogo acaba qnd o jogador for a falencia
+            while (Player1.Dinheiro >= 0)
+            {
+                Console.Clear();
+                //Dinheiro e dia
+                Console.WriteLine("[Dinheiro atual: " + Player1.Dinheiro + " | Dia atual: " + Dias.nextDay() + "]\n\n");
+                
+                //Evento Diario
+                Console.WriteLine("Daily event");
+                Console.WriteLine(Dias.dailyEvent(Player1.Cavalo));
+                //tratarCavalo();
+                Console.ReadKey();
+
+                //Status do cavalo
+                Console.WriteLine("\n\nStatus do cavalo:");
+                Console.WriteLine("\nNome: " + Player1.Cavalo.Nome);
+                Console.WriteLine("\nVelocidade: " + Player1.Cavalo.Velocidade);
+                Console.WriteLine("\nStamina: " + Player1.Cavalo.Stamina);
+                Console.WriteLine("\nIdade: " + Player1.Cavalo.Idade);
+                Console.WriteLine("\nStatus: Normal");
+                Console.ReadKey();
+
+                //Corrida
+                Console.WriteLine(Torneio.race(Player1.Cavalo, Player1.Dinheiro));
+                }
+            //Fim do jogo
             Console.Clear();
             Console.WriteLine("Game Over");
         }

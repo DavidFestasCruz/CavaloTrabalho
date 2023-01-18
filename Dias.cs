@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
-    public class Dias
+    public static class Dias
     {
-        public int dia;
+        public static int dia = 0;
 
-        public Dias(int dia)
+        public static int nextDay()
         {
-            this.dia = dia;
+            dia = dia + 1;
+            return dia;
         }
-        public int diaHoje()
+
+        public static string dailyEvent(Cavalo cavalo)
         {
-            this.dia = this.dia + 1;
-            return this.dia;
+            Random rnd = new Random();
+            int random = rnd.Next(1, 3);
+
+            switch (random)
+            {
+                case 1:
+                    cavalo.Velocidade = cavalo.Velocidade + 2;
+                    return "O cavalo sente-se energético e começou a correr sozinho na pista de treino. +2 de Velocidade!";
+
+                case 2:
+                    Status Status = Status.doente;
+                    return "O cavalo adoeceu.";
+
+                    default:
+                    return "Nothing happened";
+            }
         }
     }
-
 }
