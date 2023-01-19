@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
+    [Serializable]
     public static class Dias
     {
         public static int dia = 0;

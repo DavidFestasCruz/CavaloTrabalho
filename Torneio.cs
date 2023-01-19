@@ -6,33 +6,28 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
-    public class Torneio
+    [Serializable]
+    public static class Torneio
     {
-        private int participantes;
-        private int recompensa;
-        private int position;
+        public static int participantes;
+        public static int recompensa;
+        public static int position;
 
-        public Torneio(int participantes, int recompensa, int position)
-        {
-            this.participantes = participantes;
-            this.recompensa = recompensa;
-            this.position = position;
-        }
-
-        public int Participantes { get => participantes; set => participantes = value; }
-        public int Recompensa { get => recompensa; set => recompensa = value; }
-        public int Position { get => position; set => position = value; }
-
-        public string race(Cavalo cavalo, Equipa jogador)
+        public static string race(Cavalo cavalo, Equipa jogador)
         {
             int lugar;
 
             Random rnd = new Random();
-            this.participantes = rnd.Next(1, 21);
-            lugar = rnd.Next(2, 21);
+            participantes = rnd.Next(1, 16);
 
-            position = cavalo.Velocidade - (cavalo.Idade/2) * (cavalo.Stamina / 10) / this.participantes * rnd.Next(1, 21);
-            recompensa = 1000 * (participantes / 10);
+            position = cavalo.Velocidade / (cavalo.Idade/2) * (cavalo.Stamina / 3);
+
+            recompensa = 1000;
+
+            Console.WriteLine("A corrida está prestes a começar!");
+            Console.WriteLine("Prosseguir");
+            Console.ReadKey();
+            Console.Clear();
 
             if(position > participantes)
             {
@@ -41,7 +36,8 @@ namespace CavalosTrabalho
             }
             else
             {
-                return "O jogador terminou a corrida em " + lugar + "º lugar!";
+                jogador.Dinheiro = jogador.Dinheiro - (recompensa / 2);
+                return "O jogador terminou a corrida em " + participantes + "º lugar!";
             }
         }
     }

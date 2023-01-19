@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
+    [Serializable]
     static class VendedorCavalos
     {
         public static Cavalo getCavalo(string EscolhaCavalo, Equipa equipa)
@@ -29,20 +30,20 @@ namespace CavalosTrabalho
                 equipa.Dinheiro -= 3000;
                 return Forte;
             }
+            else if (EscolhaCavalo == "Next" && equipa.Cavalo != null)
+            {
+                return equipa.Cavalo;
+            }
+            else if (EscolhaCavalo != "Basico" && EscolhaCavalo != "Intermedio" && EscolhaCavalo != "Forte" && EscolhaCavalo != "Next")
+            {
+                Console.WriteLine("Escolha não válida");
+                return null;
+            }
             else
             {
-                if (EscolhaCavalo != "Basico" && EscolhaCavalo != "Intermedio" && EscolhaCavalo != "Forte")
-                {
-                    Console.WriteLine("Escolha não válida");
-                    return null;
-                }
-                else
-                {
-                    Console.WriteLine("Não tem dinheiro para esse cavalo");
-                    return null;
-                }
+                Console.WriteLine("Não tem dinheiro para esse cavalo");
+                return null;
             }
-
         }
     }
 }

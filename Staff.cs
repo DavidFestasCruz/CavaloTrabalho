@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
+    [Serializable]
     public class Staff
     {
-        private string name;
-        private string funcao;
+        private int staffNumber;
+        private int staffPrice;
 
-        public Staff(string name, string funcao)
+        public int StaffNumber { get => staffNumber; set => staffNumber = value; }
+        public int StaffPrice { get => staffPrice; set => staffPrice = value; }
+
+        public Staff(int staffNumber, int staffPrice)
         {
-            this.name = name;
-            this.funcao = funcao;
+            this.StaffNumber = staffNumber;
+            this.StaffPrice = staffPrice;
         }
-
-        public string Name { get => name; set => name = value; }
-        public string Funcao { get => funcao; set => funcao = value; }
     }
 }

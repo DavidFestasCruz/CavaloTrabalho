@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CavalosTrabalho
 {
+    [Serializable]
     enum Status
         {
         saudavel,
