@@ -19,10 +19,10 @@ namespace CavalosTrabalho
         static void Main(string[] args)
         {
             //Objeto jogador
-            Equipa Player1 = new Equipa("Equipa 1", "None", 999999500, 1);
+            Equipa Player1 = new Equipa("Equipa 1", "None", 1000, 1);
 
             //Objeto cavalos
-            Cavalo Basico = new Cavalo("Fraco", 250, 2, 2, 30);
+            Cavalo Basico = new Cavalo("Fraco", 250, 5, 5, 30);
             Cavalo Intermedio = new Cavalo("Medio", 1500, 10, 10, 20);
             Cavalo Forte = new Cavalo("Forte", 3000, 18, 18, 10);
 
@@ -80,17 +80,24 @@ namespace CavalosTrabalho
                 Console.WriteLine("Daily event");
                 Console.WriteLine(Dias.dailyEvent(Player1.Cavalo));
                 Console.ReadKey();
+                Console.Clear();
+
+                //Tratar Cavalo
+                //string escolherTratar = Console.ReadLine();
+                //Console.WriteLine(Cavalo.tratarCavalo(escolherTratar, staffTeam, Player1));
+                //Console.ReadKey();
+                //Console.Clear();
 
                 //Comprar staff;
-                Console.WriteLine("Dejesa contratar um membro de staff?");
-                string comprarStaff = Console.ReadLine();
-                Player1.Staff = buyStaff.getStaff(comprarStaff, Player1);
+                //Console.WriteLine("Dejesa contratar um membro de staff?");
+                //string comprarStaff = Console.ReadLine();
+                //Player1.Staff = buyStaff.getStaff(comprarStaff, Player1);
 
-                while (comprarStaff != "N" || comprarStaff != "S")
-                {
-                    comprarStaff = Console.ReadLine();
-                    Player1.Staff = buyStaff.getStaff(EscolhaJogador, Player1);
-                }
+                //while (comprarStaff != "N" || comprarStaff != "S")
+                //{
+                //comprarStaff = Console.ReadLine();
+                //Player1.Staff = buyStaff.getStaff(EscolhaJogador, Player1);
+                //}
 
                 //Status do cavalo
                 Console.WriteLine("\n\nStatus do cavalo:");
@@ -100,6 +107,7 @@ namespace CavalosTrabalho
                 Console.WriteLine("\nIdade: " + Player1.Cavalo.Idade);
                 Console.WriteLine("\nStatus: Normal");
                 Console.ReadKey();
+                Console.Clear();
 
                 //Corrida
                 if (Dias.dia % 10 == 0)

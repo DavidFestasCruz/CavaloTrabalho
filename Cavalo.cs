@@ -37,6 +37,28 @@ namespace CavalosTrabalho
         public int Stamina { get => stamina; set => stamina = value; }
         public int Idade { get => idade; set => idade = value; }
 
+        public void tratarCavalo(string escolhaTratar, Cavalo cavalo, Staff staff, Equipa equipa)
+        {
+            Console.WriteLine("O que pretende treinar?\n\n");
+            Console.WriteLine("Velocidade\n");
+            Console.WriteLine("Stamina\n");
+            
+            if (escolhaTratar == "Velocidade")
+            {
+                velocidade = velocidade + 1 * (staff.StaffNumber / 2);
+                equipa.Dinheiro = equipa.Dinheiro - 250;
+            }
+            else if (escolhaTratar == "Stamina")
+            {
+                stamina = stamina + 1 * (staff.StaffNumber / 2);
+                equipa.Dinheiro = equipa.Dinheiro - 250;
+            }
+            else
+            {
+                Console.WriteLine("Nada treinado\n");
+            }
+        }
+
         public override string ToString()
         {
             return "O cavalo " + Nome + " custa " + Preco + " moedas, possui " + Velocidade + " de velocidade e " + Stamina + " de stamina. Este cavalo tem " + Idade + " anos de idade.";

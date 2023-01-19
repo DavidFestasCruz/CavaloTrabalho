@@ -32,23 +32,23 @@ namespace CavalosTrabalho
         }
 
         //Carregar
-        public static Cavalo LoadGame()
-        {
+        //public static Cavalo LoadGame()
+        //{
 
-            string fileName = "MuseuGuardo.txt";
+            //string fileName = "MuseuGuardo.txt";
 
-            if (File.Exists(fileName))
-            {
-                FileStream fileStream = File.OpenRead(fileName);
-                BinaryFormatter f = new BinaryFormatter();
+            //if (File.Exists(fileName))
+            //{
+                //FileStream fileStream = File.OpenRead(fileName);
+                //BinaryFormatter f = new BinaryFormatter();
 
-                return f.Deserialize(fileStream) as Cavalo;
-            }
-            else
-            {
-                return new Program();
-            }
+                //return f.Deserialize(fileStream) as Cavalo;
+            //}
+            //else
+            //{
+                //return new Cavalo();
+            //}
 
-        }
+        //}
     }
 }

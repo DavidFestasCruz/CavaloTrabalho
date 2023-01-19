@@ -20,7 +20,7 @@ namespace CavalosTrabalho
         public static string dailyEvent(Cavalo cavalo)
         {
             Random rnd = new Random();
-            int random = rnd.Next(1, 3);
+            int random = rnd.Next(1, 11);
 
             switch (random)
             {
@@ -32,8 +32,15 @@ namespace CavalosTrabalho
                     Status Status = Status.doente;
                     return "O cavalo adoeceu.";
 
-                    default:
-                    return "Nothing happened";
+                case 3:
+                    cavalo.Stamina = cavalo.Stamina + 2;
+                    return "O cavalo comeu o dobro da refeição. +2 de Stamina!";
+
+                case 4:
+                    return "O cavalo magoou-se e torceu a perna. -2 de Velocidade!";
+
+                default:
+                    return "Nothing happened.";
             }
         }
     }

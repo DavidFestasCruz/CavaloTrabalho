@@ -18,7 +18,7 @@ namespace CavalosTrabalho
             int lugar;
 
             Random rnd = new Random();
-            participantes = rnd.Next(1, 16);
+            participantes = rnd.Next(1, 10);
 
             position = cavalo.Velocidade / (cavalo.Idade/2) * (cavalo.Stamina / 3);
 
@@ -37,7 +37,7 @@ namespace CavalosTrabalho
             else
             {
                 jogador.Dinheiro = jogador.Dinheiro - (recompensa / 2);
-                return "O jogador terminou a corrida em " + participantes + "º lugar!";
+                return "O jogador terminou a corrida em " + participantes + "º lugar! O jogador predeu 500 moedas";
             }
         }
     }
