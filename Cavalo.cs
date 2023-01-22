@@ -37,7 +37,7 @@ namespace CavalosTrabalho
         public int Stamina { get => stamina; set => stamina = value; }
         public int Idade { get => idade; set => idade = value; }
 
-        public void tratarCavalo(string escolhaTratar, Cavalo cavalo, Staff staff, Equipa equipa)
+        public void tratarCavalo(string escolhaTratar,Staff staff, Equipa equipa)
         {
             Console.WriteLine("O que pretende treinar?\n\n");
             Console.WriteLine("Velocidade\n");

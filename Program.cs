@@ -91,12 +91,12 @@ namespace CavalosTrabalho
                 //Comprar staff;
                 //Console.WriteLine("Dejesa contratar um membro de staff?");
                 //string comprarStaff = Console.ReadLine();
-                //Player1.Staff = buyStaff.getStaff(comprarStaff, Player1);
+                //Player1.Staff = buyStaff.getStaff(comprarStaff);
 
                 //while (comprarStaff != "N" || comprarStaff != "S")
                 //{
                 //comprarStaff = Console.ReadLine();
-                //Player1.Staff = buyStaff.getStaff(EscolhaJogador, Player1);
+                //Player1.Staff = buyStaff.getStaff(EscolhaJogador);
                 //}
 
                 //Status do cavalo
@@ -112,9 +112,10 @@ namespace CavalosTrabalho
                 //Corrida
                 if (Dias.dia % 10 == 0)
                 {
-                    Console.WriteLine(Torneio.race(Player1.Cavalo, Player1));
+                    Console.WriteLine(Torneio.race( Player1));
                     Console.ReadKey();
                 }
+              
 
                 if (Dias.dia % 40 == 0)
                 {

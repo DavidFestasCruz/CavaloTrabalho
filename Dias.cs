@@ -37,6 +37,7 @@ namespace CavalosTrabalho
                     return "O cavalo comeu o dobro da refeição. +2 de Stamina!";
 
                 case 4:
+                    cavalo.Stamina = cavalo.Stamina - 2;
                     return "O cavalo magoou-se e torceu a perna. -2 de Velocidade!";
 
                 default:

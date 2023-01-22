@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\david\\.nuget\\packages\\": {}
+    "C:\\Users\\Rafael Enes\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\CavalosTrabalho.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael Enes\\Source\\Repos\\CavaloTrabalho\\CavalosTrabalho.csproj",
       "projectName": "CavalosTrabalho",
-      "projectPath": "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\CavalosTrabalho.csproj",
-      "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\david\\source\\repos\\CavalosTrabalho\\obj\\",
+      "projectPath": "C:\\Users\\Rafael Enes\\Source\\Repos\\CavaloTrabalho\\CavalosTrabalho.csproj",
+      "packagesPath": "C:\\Users\\Rafael Enes\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael Enes\\Source\\Repos\\CavaloTrabalho\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rafael Enes\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

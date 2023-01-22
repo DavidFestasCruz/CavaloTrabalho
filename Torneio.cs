@@ -13,14 +13,14 @@ namespace CavalosTrabalho
         public static int recompensa;
         public static int position;
 
-        public static string race(Cavalo cavalo, Equipa jogador)
+        public static string race( Equipa jogador)
         {
-            int lugar;
+            
 
             Random rnd = new Random();
             participantes = rnd.Next(1, 10);
 
-            position = cavalo.Velocidade / (cavalo.Idade/2) * (cavalo.Stamina / 3);
+            position = jogador.Cavalo.Velocidade / (jogador.Cavalo.Idade/2) * (jogador.Cavalo.Stamina / 3);
 
             recompensa = 1000;
 
@@ -37,7 +37,7 @@ namespace CavalosTrabalho
             else
             {
                 jogador.Dinheiro = jogador.Dinheiro - (recompensa / 2);
-                return "O jogador terminou a corrida em " + participantes + "º lugar! O jogador predeu 500 moedas";
+                return "O jogador terminou a corrida em " + participantes + "º lugar! O jogador perdeu 500 moedas";
             }
         }
     }
